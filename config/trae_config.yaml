@@ -1,0 +1,15 @@
+model_providers:
+  ollama:
+    provider: ollama
+    base_url: http://localhost:11434/api
+    model: llama3
+    type: local
+    required: true
+agent_instances:
+  default:
+    model: ollama
+    tools:
+      - bash
+      - file
+      - http
+    sandbox: true

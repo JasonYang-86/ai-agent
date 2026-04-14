@@ -1,0 +1,39 @@
+# Node.js 依赖
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# 环境变量
+.env
+.env.local
+.env.*.local
+
+# 构建输出
+dist/
+build/
+
+# 编辑器文件
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 操作系统文件
+Thumbs.db
+.DS_Store
+
+# 测试文件
+coverage/
+.nyc_output/
+
+# 临时文件
+*.tmp
+*.temp
+.cache/
+
+# 日志文件
+logs/
+*.log

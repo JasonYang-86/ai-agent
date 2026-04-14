@@ -1,0 +1,37 @@
+{
+  "name": "trae-agent",
+  "version": "1.0.0",
+  "description": "基于 Trae-Agent 的通用 AI 代理系统",
+  "bin": {
+    "trae": "dist/cli/index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsx src/cli/index.ts",
+    "start": "node dist/cli/index.js",
+    "lint": "eslint src --ext .ts",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@clack/prompts": "^1.0.1",
+    "chalk": "^5.6.2",
+    "commander": "^14.0.3",
+    "dockerode": "^4.0.2",
+    "axios": "^1.6.2",
+    "yaml": "^2.8.2"
+  },
+  "devDependencies": {
+    "@types/dockerode": "^4.0.1",
+    "@types/node": "^25.3.3",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "eslint": "^8.54.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}
