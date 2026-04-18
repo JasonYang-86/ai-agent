@@ -1,13 +1,25 @@
 model_providers:
+  openrouter:
+    api_key: sk-xxxxxxxxxxxxxxxxxxxxxxxx
+    provider: openrouter
+    base_url: https://openrouter.ai/api/v1
+    type: cloud
   ollama:
     provider: ollama
     base_url: http://localhost:11434/api
     model: llama3
     type: local
     required: true
+  qwen:
+    provider: qwen
+    type: cloud
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    required: false
+    api_key: sk-d7044ce8eec844849e875a580c6e31f2
+    model: qwen-turbo
 agent_instances:
   default:
-    model: ollama
+    model: qwen
     tools:
       - bash
       - file

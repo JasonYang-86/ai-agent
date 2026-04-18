@@ -9,8 +9,12 @@ import { MemoryManager } from '../memory/memory.js';
 import { ToolExecutor } from '../tools/executor.js';
 import * as prompts from '@clack/prompts';
 import chalk from 'chalk';
+import dotenv from 'dotenv';
 
-// 环境变量已通过系统环境或 .env 文件加载
+// 加载环境变量
+dotenv.config();
+console.log('环境变量加载成功');
+console.log('OPENROUTER_API_KEY:', process.env.OPENROUTER_API_KEY ? '已设置' : '未设置');
 
 export class CLI {
   private agentManager: AgentManager;

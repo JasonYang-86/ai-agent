@@ -1,8 +1,12 @@
- import fs from 'fs';
+import fs from 'fs';
 import yaml from 'yaml';
 import axios from 'axios';
+import dotenv from 'dotenv';
 import { ModelConfig, ChatHistory } from './types';
 import { ModelManager } from '../models/modelManager.js';
+
+// 加载环境变量
+dotenv.config();
 
 export class AgentManager {
   private configPath: string;
